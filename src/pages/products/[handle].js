@@ -51,7 +51,6 @@ function SingleProduct({ product }) {
     setLoading(true);
     try {
       await addItem(variant.id, 1);
-      console.log("After add item");
       openSidebar();
       setLoading(false);
     } catch (err) {
