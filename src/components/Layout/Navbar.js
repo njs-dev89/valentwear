@@ -31,7 +31,9 @@ function Navbar({ setCartOpen, setLinkDrawerOpen }) {
           <div className="flex items-center">
             <span className="flex items-center sm:mr-6 mr-2">
               <FiSearch className="mr-1 sm:text-xl text-base" />
-              <span className="sm:text-xl text-sm">Search</span>
+              <span className="sm:text-xl text-sm sm:inline hidden">
+                Search
+              </span>
             </span>
             <FiShoppingCart
               className="sm:text-xl text-base cursor-pointer"
