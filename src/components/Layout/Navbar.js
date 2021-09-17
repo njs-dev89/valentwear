@@ -20,21 +20,21 @@ function Navbar({ setCartOpen, setLinkDrawerOpen }) {
         <div className="flex flex-row justify-between mt-12 md:mt-0">
           <div className="flex items-center">
             <FiMenu
-              className="mr-6 text-xl cursor-pointer"
+              className="sm:mr-6 mr-2 sm:text-xl text-base cursor-pointer"
               onClick={() => setLinkDrawerOpen(true)}
             />
-            <span>Categories</span>
+            <span className="sm:text-base text-sm">Categories</span>
             <Link href="/collections">
-              <a className="ml-2">Collections</a>
+              <a className="ml-2 sm:text-base text-sm">Collections</a>
             </Link>
           </div>
           <div className="flex items-center">
-            <span className="flex items-center mr-6">
-              <FiSearch className="mr-1 text-xl" />
-              Search
+            <span className="flex items-center sm:mr-6 mr-2">
+              <FiSearch className="mr-1 sm:text-xl text-base" />
+              <span className="sm:text-xl text-sm">Search</span>
             </span>
             <FiShoppingCart
-              className="text-xl cursor-pointer"
+              className="sm:text-xl text-base cursor-pointer"
               onClick={() => setCartOpen(true)}
             />
           </div>

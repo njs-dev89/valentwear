@@ -10,7 +10,7 @@ const CartDrawer = ({ children, open = false, onClose }) => {
       contentProps={{
         style: {
           width: "100%",
-          maxWidth: "500px",
+          maxWidth: "400px",
           position: "absolute",
           background: "white",
           top: 0,
