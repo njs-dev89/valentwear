@@ -1,7 +1,9 @@
-const OptionPicker = ({ name, options, onChange, selected }) => {
+const OptionPicker = ({ name, label, options, onChange, selected }) => {
   return (
     <div className="flex flex-col">
-      <label htmlFor={name}>{name}</label>
+      <label htmlFor={name} className="font-medium mb-2 mt-8">
+        {label}
+      </label>
       <select
         id={name}
         onChange={onChange}

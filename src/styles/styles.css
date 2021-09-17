@@ -2,6 +2,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.home-banner {
+  margin-top: 40vh;
+  transform: translateY(-50%);
+  margin-bottom: 300px;
+}
+.banner-image > div {
+  z-index: -20;
+  height: 100vh;
+  max-height: 768px;
+}
+
 .headline::before,
 .headline::after {
   content: "";

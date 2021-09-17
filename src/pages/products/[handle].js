@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import OptionPicker from "../../components/OptionPicker";
+import { UIContext } from "../../context/uiContext";
 import { useAddItemToCart } from "../../customHooks/cartHooks";
 import {
   prepareVariantsImages,
@@ -9,7 +10,7 @@ import {
 import { getProductByHandle } from "../../utils/operations";
 
 function SingleProduct({ product }) {
-  console.log(product);
+  const { openCartDrawer, displayCartDrawer } = useContext(UIContext);
   const [loading, setLoading] = useState(false);
   const addItem = useAddItemToCart();
 
@@ -51,7 +52,7 @@ function SingleProduct({ product }) {
     setLoading(true);
     try {
       await addItem(variant.id, 1);
-      openSidebar();
+      openCartDrawer();
       setLoading(false);
     } catch (err) {
       console.log({ variant: variant.id, err });
@@ -92,8 +93,8 @@ function SingleProduct({ product }) {
         />
       </div>
       <div className="col-span-1">
-        <h1 className="text-2xl font-semibold">{product.title}</h1>
-        <p>${variant.priceV2.amount}</p>
+        <h1 className="text-2xl font-medium">{product.title}</h1>
+        <p className="mt-2">${variant.priceV2.amount}</p>
         {colors?.length && (
           <OptionPicker
             key="Color"
@@ -104,21 +105,25 @@ function SingleProduct({ product }) {
           />
         )}
         {sizes?.length && (
-          <OptionPicker
-            key="Size"
-            name="Size"
-            options={sizes}
-            selected={size}
-            onChange={(event) => setSize(event.target.value)}
-          />
+          <div className="">
+            <OptionPicker
+              key="Size"
+              name="Size"
+              label="Select size"
+              options={sizes}
+              selected={size}
+              onChange={(event) => setSize(event.target.value)}
+            />
+            <p className="text-sm">Sizing guide in the description below </p>
+          </div>
         )}
         <button
           name="add-to-cart"
           disabled={loading}
-          className="w-full py-3 block bg-black text-white"
+          className="w-full py-3 block bg-black text-white my-8"
           onClick={addToCart}
         >
-          Add to Cart {loading && <p>Loading</p>}
+          Add to Cart {loading && <p>Loading...</p>}
         </button>
         <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
       </div>

@@ -1,13 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FiMenu, FiSearch, FiShoppingCart } from "react-icons/fi";
 
 function Navbar({ setCartOpen, setLinkDrawerOpen }) {
+  const router = useRouter();
   return (
-    <nav className="bg-black text-white text-base">
+    <nav
+      className={`${
+        router.pathname === "/" ? "bg-transparent" : "bg-black"
+      } text-white text-base z-50`}
+    >
       <div className="max-w-screen-xl lg:mx-auto py-5 relative xl:px-0 px-8">
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          Valent
+        <div className="absolute left-1/2 transform -translate-x-1/2 text-lg font-medium tracking-widest">
+          <Link href="/">
+            <a>VALENT</a>
+          </Link>
         </div>
         <div className="flex flex-row justify-between">
           <div className="flex items-center">

@@ -27,12 +27,7 @@ const CartView = () => {
       }}
     >
       {isEmpty ? (
-        <>
-          Your cart is empty
-          <p>
-            Biscuit oat cake wafer icing ice cream tiramisu pudding cupcake.
-          </p>
-        </>
+        <>Your cart is empty</>
       ) : (
         <>
           {items.map((item) => (

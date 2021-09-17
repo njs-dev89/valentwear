@@ -33,7 +33,7 @@ function CollectionsPage({ collections }) {
               key={collection.id}
               name={collection.title}
               description={
-                collection.dexcription ||
+                collection.description ||
                 "The founding collection. Be a victim victor of life’s circumstances."
               }
               link={`/collections/${collection.handle}`}

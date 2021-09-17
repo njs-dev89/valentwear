@@ -11,6 +11,9 @@ module.exports = {
       fontSize: {
         "4.5xl": "2.5rem",
       },
+      colors: {
+        gold: "#c1b661",
+      },
     },
   },
   variants: {
