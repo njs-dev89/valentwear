@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FiMenu, FiSearch, FiShoppingCart } from "react-icons/fi";
 
 function Navbar({ setCartOpen, setLinkDrawerOpen }) {
@@ -15,7 +16,9 @@ function Navbar({ setCartOpen, setLinkDrawerOpen }) {
               onClick={() => setLinkDrawerOpen(true)}
             />
             <span>Categories</span>
-            <span>Collections</span>
+            <Link href="/collections">
+              <a className="ml-2">Collections</a>
+            </Link>
           </div>
           <div className="flex items-center">
             <span className="flex items-center mr-6">
