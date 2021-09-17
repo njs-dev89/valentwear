@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../cartContext";
+import { Context } from "../../context/cartContext";
 import { useGetLineItem } from "./useGetLineItem";
 
 export function useRemoveItemsFromCart() {
