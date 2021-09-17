@@ -23,16 +23,18 @@ const CartDrawer = ({ children, open = false, onClose }) => {
         leave: { transform: "translateX(100%)" },
       }}
     >
-      <ModalTitle className="text-center relative px-4 py-6 bg-gray-100">
-        <span className="text-2xl">Shopping cart</span>
-        <ModalCloseTarget>
-          <div className="block absolute right-0 bottom-1/2 transform translate-y-1/2 mr-4">
-            <FaTimes />
-          </div>
-        </ModalCloseTarget>
-      </ModalTitle>
+      <div className="relative h-screen">
+        <ModalTitle className="text-center relative px-4 py-6 bg-gray-100">
+          <span className="text-2xl">Shopping cart</span>
+          <ModalCloseTarget>
+            <div className="block absolute right-0 bottom-1/2 transform translate-y-1/2 mr-4">
+              <FaTimes />
+            </div>
+          </ModalCloseTarget>
+        </ModalTitle>
 
-      {children}
+        {children}
+      </div>
     </BaseModal>
   );
 };

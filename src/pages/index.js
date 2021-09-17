@@ -25,7 +25,7 @@ export default function Home({ bestSeller, featureCollections }) {
           <SectionHeading hashTag="#MoreThanJewelry">
             Best Sellers
           </SectionHeading>
-          <div className="grid grid-cols-3 gap-12 mt-16">
+          <div className="grid md:grid-cols-3 gap-12 mt-16">
             <SingleProductCard
               title={bestSeller.products[0].title}
               price={bestSeller.products[0].variants[0].price}
@@ -55,7 +55,7 @@ export default function Home({ bestSeller, featureCollections }) {
           <h1 className="text-center uppercase text-3xl font-semibold mb-12">
             Featured Collections
           </h1>
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12">
             <SingleCollection
               name={featureCollections[0].title}
               description={featureCollections[0].description}

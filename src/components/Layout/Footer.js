@@ -10,9 +10,9 @@ import FooterLinks from "./FooterLinks";
 function Footer() {
   return (
     <div className="max-w-screen-xl mx-auto mt-20 xl:px-0 px-8">
-      <div className="grid grid-cols-7 gap-32">
-        <div className="col-span-5">
-          <div className="grid grid-cols-4 gap-8">
+      <div className="grid lg:grid-cols-7 md:grid-cols-5 md:gap-8 lg:gap-16 xl:gap-32">
+        <div className="lg:col-span-5 md:col-span-3 mx-auto">
+          <div className="grid md:cols-2 lg:grid-cols-4 gap-8">
             <div className="">
               <Image
                 src="/valentLogo.png"
@@ -60,7 +60,7 @@ function Footer() {
             />
           </div>
         </div>
-        <div className="col-span-2 ">
+        <div className="md:col-span-2 w-3/4 mx-auto md:w-full mt-12 md:mt-0">
           <div className="border-t">
             <p className="my-4">
               Join our community of victors choosing to live a life of greatness

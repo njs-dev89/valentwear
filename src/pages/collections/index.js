@@ -26,7 +26,7 @@ function CollectionsPage({ collections }) {
         how we respond in the face of adversity.
       </p>
 
-      <div className="grid grid-cols-2 gap-16 mt-24">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-16 mt-24">
         {collections.map((collection) => {
           return (
             <SingleCollection

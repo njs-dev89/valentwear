@@ -15,7 +15,7 @@ const CustomDotGroup = ({ images, ...imageProps }) => {
     <div className="grid grid-cols-2 gap-6 mt-6">
       {images.map((image, slide) => (
         <div
-          className="col-span-1 relative h-96"
+          className="col-span-1 relative h-72 md:h-96"
           key={slide}
           //   onClick={() => onThumbnailClick?.(slide)}
         >
@@ -78,7 +78,6 @@ const ImageCarousel = ({
                   src={image.src}
                   {...imageProps}
                   alt=""
-                  height="400"
                   layout="fill"
                   objectFit="cover"
                   objectPosition="center"

@@ -60,7 +60,7 @@ const CartItem = ({ item, currencyCode }) => {
   }, [item.quantity]);
 
   return (
-    <div className="flex gap-4 mx-auto px-4 py-4">
+    <div className="flex gap-4 mx-auto px-8 py-4">
       <div>
         <Image
           height={130}

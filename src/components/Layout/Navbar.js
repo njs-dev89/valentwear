@@ -17,7 +17,7 @@ function Navbar({ setCartOpen, setLinkDrawerOpen }) {
             <a>VALENT</a>
           </Link>
         </div>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between mt-12 md:mt-0">
           <div className="flex items-center">
             <FiMenu
               className="mr-6 text-xl cursor-pointer"

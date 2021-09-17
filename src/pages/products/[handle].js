@@ -70,8 +70,8 @@ function SingleProduct({ product }) {
     );
 
   return (
-    <div className="grid grid-cols-3 gap-16">
-      <div className="col-span-2">
+    <div className="grid md:grid-cols-3 gap-16">
+      <div className="md:col-span-2">
         <ImageCarousel
           showZoom
           alt={product.title}
