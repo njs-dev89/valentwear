@@ -1,6 +1,6 @@
 import "../styles/styles.css";
 import Layout from "../components/Layout/Layout";
-import { CommerceProvider } from "../cartContext";
+import { CommerceProvider } from "../context/cartContext";
 
 function MyApp({ Component, pageProps }) {
   return (

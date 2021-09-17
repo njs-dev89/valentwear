@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { LocalStorage, LocalStorageKeys } from "../utils/localStorage";
+import { LocalStorage, LocalStorageKeys } from "../../utils/localStorage";
 import ShopifyBuy from "shopify-buy";
 
 export const Context = React.createContext({
