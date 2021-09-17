@@ -72,8 +72,8 @@ const CartItem = ({ item, currencyCode }) => {
       </div>
       <div className="w-full">
         <div className="flex flex-row justify-between">
-          <h3 className=" font-medium">{item.title}</h3>
-          <p className="font-medium">
+          <h3 className="text-sm sm:text-base font-medium">{item.title}</h3>
+          <p className="text-sm sm:text-base font-medium">
             {getPrice(
               item.variant.priceV2.amount,
               item.variant.priceV2.currencyCode || "USD"

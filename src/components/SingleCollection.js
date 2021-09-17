@@ -5,13 +5,9 @@ import Link from "next/link";
 function SingleCollection({ name, description, imgSrc, link }) {
   return (
     <div className="relative overflow-hidden">
-      <Image
-        src={imgSrc}
-        alt={name}
-        layout="responsive"
-        width="400"
-        height="280"
-      />
+      <div className="h-72 md:h-96 w-96 md:w-72">
+        <Image src={imgSrc} alt={name} layout="fill" width="400" height="280" />
+      </div>
       <div className="absolute -bottom-14 hover:bottom-0 bg-white w-full">
         <div className="py-2">
           <h2 className="text-3xl mt-2">{name}</h2>

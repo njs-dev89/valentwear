@@ -7,20 +7,23 @@ function CollectionsPage({ collections }) {
   console.log(collections);
   return (
     <div className="collections relative">
-      <div className="v-image absolute -top-24">
+      <div
+        className="v-image absolute -top-24"
+        style={{ width: "100%", height: "1000px" }}
+      >
         <Image
           src="/v.png"
           alt=""
-          width="2000px"
-          height="2000px"
-          layout="responsive"
+          width="1000px"
+          height="1000px"
+          layout="fill"
           className=""
         />
       </div>
       <SectionHeading hashTag="#ChooseGreatness">
         THE COLLECTIONS
       </SectionHeading>
-      <p className="text-center mx-auto tagline w-3/5 mt-2">
+      <p className="text-center mx-auto tagline w-3/5 mt-2 md:text-base text-sm">
         Valent was created to serve as a reminder that choice is at the heart of
         life. We can’t control the circumstances around us, but we can control
         how we respond in the face of adversity.
