@@ -12,6 +12,11 @@
   height: 100vh;
   max-height: 768px;
 }
+@media screen and (max-width: 500px) {
+  .banner-image > div {
+    height: 70vh;
+  }
+}
 
 .headline::before,
 .headline::after {

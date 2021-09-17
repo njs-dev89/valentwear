@@ -1,5 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 import { BaseModal, ModalCloseTarget, ModalTitle } from "react-spring-modal";
+import "react-spring-modal/styles.css";
 
 const CartDrawer = ({ children, open = false, onClose }) => {
   return (
