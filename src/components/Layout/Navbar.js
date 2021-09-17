@@ -11,7 +11,7 @@ function Navbar({ setCartOpen, setLinkDrawerOpen }) {
         <div className="flex flex-row justify-between">
           <div className="flex items-center">
             <FiMenu
-              className="mr-6 text-xl"
+              className="mr-6 text-xl cursor-pointer"
               onClick={() => setLinkDrawerOpen(true)}
             />
             <span>Categories</span>
@@ -23,7 +23,7 @@ function Navbar({ setCartOpen, setLinkDrawerOpen }) {
               Search
             </span>
             <FiShoppingCart
-              className="text-xl"
+              className="text-xl cursor-pointer"
               onClick={() => setCartOpen(true)}
             />
           </div>
