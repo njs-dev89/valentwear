@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.headline::before,
+.headline::after {
+  content: "";
+  border-top: 3px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+  color: #c1b661;
+}
+
+.headline::after {
+  margin: 0 0 0 20px;
+}
+
+.v-image {
+  z-index: -20;
+  width: 100%;
+}
+
+.option-picker {
+  border-color: black !important;
+}
