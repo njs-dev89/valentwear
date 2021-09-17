@@ -1,4 +1,5 @@
-import { BaseModal, ModalCloseTarget } from "react-spring-modal";
+import { FaTimes } from "react-icons/fa";
+import { BaseModal, ModalCloseTarget, ModalTitle } from "react-spring-modal";
 
 const CartDrawer = ({ children, open = false, onClose }) => {
   return (
@@ -22,9 +23,15 @@ const CartDrawer = ({ children, open = false, onClose }) => {
         leave: { transform: "translateX(100%)" },
       }}
     >
-      <ModalCloseTarget>
-        <div className="block">X</div>
-      </ModalCloseTarget>
+      <ModalTitle className="text-center relative px-4 py-6 bg-gray-100">
+        <span className="text-2xl">Shopping cart</span>
+        <ModalCloseTarget>
+          <div className="block absolute right-0 bottom-1/2 transform translate-y-1/2 mr-4">
+            <FaTimes />
+          </div>
+        </ModalCloseTarget>
+      </ModalTitle>
+
       {children}
     </BaseModal>
   );

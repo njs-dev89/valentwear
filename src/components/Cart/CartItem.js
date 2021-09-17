@@ -60,16 +60,8 @@ const CartItem = ({ item, currencyCode }) => {
   }, [item.quantity]);
 
   return (
-    <div>
-      <div
-        sx={{
-          padding: 1,
-          border: "1px solid gray",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <div className="flex gap-4 mx-auto px-4 py-4">
+      <div>
         <Image
           height={130}
           width={130}
@@ -78,23 +70,22 @@ const CartItem = ({ item, currencyCode }) => {
           src={item.variant.image.src}
         />
       </div>
-      <div>
-        <div
-          as={Link}
-          href={`/product/${item.variant.product.handle}/`}
-          sx={{ fontSize: 3, m: 0, fontWeight: 700 }}
-        >
-          <>
-            {item.title}
-            <p>
-              {getPrice(
-                item.variant.priceV2.amount,
-                item.variant.priceV2.currencyCode || "USD"
-              )}
-            </p>
-          </>
+      <div className="w-full">
+        <div className="flex flex-row justify-between">
+          <h3 className=" font-medium">{item.title}</h3>
+          <p className="font-medium">
+            {getPrice(
+              item.variant.priceV2.amount,
+              item.variant.priceV2.currencyCode || "USD"
+            )}
+          </p>
         </div>
-        <ul sx={{ mt: 2, mb: 0, padding: 0, listStyle: "none" }}>
+        <ul>
+          {item.variant.selectedOptions.map((option) => (
+            <li key={option.value} className="text-xs mt-2 mb-4">
+              {option.name}:{option.value}
+            </li>
+          ))}
           <li>
             <div className="flex">
               <button onClick={() => increaseQuantity(-1)}>
@@ -115,13 +106,14 @@ const CartItem = ({ item, currencyCode }) => {
               <button onClick={() => increaseQuantity(1)}>
                 <FaPlus />
               </button>
+              <button
+                className="ml-4 text-red-700 text-xs font-medium"
+                onClick={handleRemove}
+              >
+                Remove
+              </button>
             </div>
           </li>
-          {item.variant.selectedOptions.map((option) => (
-            <li key={option.value}>
-              {option.name}:{option.value}
-            </li>
-          ))}
         </ul>
       </div>
     </div>
