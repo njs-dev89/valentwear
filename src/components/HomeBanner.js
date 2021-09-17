@@ -10,7 +10,9 @@ function HomeBanner() {
       <h1 className="text-center md:text-6xl sm:text-4xl text-3xl font-semibold mb-8 mt-2 uppercase">
         Choose Greatness
       </h1>
-      <button className="px-12 py-3 bg-gold font-medium">Shop Now</button>
+      <button className="px-12 py-3 bg-gold font-medium text-black">
+        Shop Now
+      </button>
     </div>
   );
 }

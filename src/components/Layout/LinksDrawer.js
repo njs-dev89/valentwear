@@ -1,4 +1,5 @@
 import { BaseModal, ModalCloseTarget } from "react-spring-modal";
+import { FiX } from "react-icons/fi";
 
 const LinksDrawer = ({ children, open = false, onClose }) => {
   return (
@@ -7,7 +8,7 @@ const LinksDrawer = ({ children, open = false, onClose }) => {
       onDismiss={onClose}
       contentProps={{
         style: {
-          width: "500px",
+          width: "350px",
           position: "absolute",
           background: "black",
           color: "white",
@@ -23,7 +24,9 @@ const LinksDrawer = ({ children, open = false, onClose }) => {
       }}
     >
       <ModalCloseTarget>
-        <div className="block">X</div>
+        <div className="block cursor-pointer m-8">
+          <FiX className="text-2xl font-medium" />
+        </div>
       </ModalCloseTarget>
       {children}
     </BaseModal>

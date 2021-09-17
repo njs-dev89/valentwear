@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { UIContext } from "../../context/uiContext";
 import CartView from "../Cart/CartView";
 import CartDrawer from "./CartDrawer";
@@ -7,6 +7,8 @@ import LinksDrawer from "./LinksDrawer";
 import Navbar from "./Navbar";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import LinkDrawerLinks from "./LinkDrawerLinks";
+
 function Layout({ children }) {
   const {
     displayLinkDrawer,
@@ -28,7 +30,7 @@ function Layout({ children }) {
           <CartView />
         </CartDrawer>
         <LinksDrawer open={displayLinkDrawer} onClose={closeLinkDrawer}>
-          Link Drawer Content
+          <LinkDrawerLinks />
         </LinksDrawer>
         {router.pathname === "/" ? (
           <div className="banner-image">
