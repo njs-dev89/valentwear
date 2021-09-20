@@ -19,6 +19,7 @@ module.exports = {
   variants: {
     extend: {
       inset: ["hover", "focus"],
+      opacity: ["disabled"],
     },
   },
   plugins: [require("@tailwindcss/custom-forms")],

@@ -120,10 +120,10 @@ function SingleProduct({ product }) {
         <button
           name="add-to-cart"
           disabled={loading}
-          className="w-full py-3 block bg-black text-white my-8"
+          className="w-full py-3 block bg-black text-white my-8 disabled:opacity-50"
           onClick={addToCart}
         >
-          Add to Cart {loading && <p>Loading...</p>}
+          Add to Cart
         </button>
         <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
       </div>

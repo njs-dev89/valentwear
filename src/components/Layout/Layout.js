@@ -34,7 +34,7 @@ function Layout({ children }) {
           <CartView />
         </CartDrawer>
         <LinksDrawer open={displayLinkDrawer} onClose={closeLinkDrawer}>
-          <LinkDrawerLinks />
+          <LinkDrawerLinks closeLinkDrawer={closeLinkDrawer} />
         </LinksDrawer>
         {router.pathname === "/" ? (
           <div className="banner-image">

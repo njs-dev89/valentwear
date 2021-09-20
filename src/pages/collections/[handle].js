@@ -206,7 +206,7 @@ function SingleCollection({ products, query }) {
               value="ringwear"
               name="ringwear"
               className="form-checkbox h-5 w-5 text-gold border-2 border-black checked:border-0 mr-2 filter-checkbox"
-              checked={query.category === "wringwear"}
+              checked={query.category === "ringwear"}
               onChange={handleCategoryChange}
             />
             <label htmlFor="wristwear">Ringwear</label>
@@ -221,7 +221,7 @@ function SingleCollection({ products, query }) {
               checked={query.category === "men"}
               onChange={handleCategoryChange}
             />
-            <label htmlFor="wristwear">Men</label>
+            <label htmlFor="men">Men</label>
           </div>
 
           <div className="mb-2">
@@ -233,7 +233,7 @@ function SingleCollection({ products, query }) {
               checked={query.category === "women"}
               onChange={handleCategoryChange}
             />
-            <label htmlFor="wristwear">Women</label>
+            <label htmlFor="women">Women</label>
           </div>
         </div>
 
