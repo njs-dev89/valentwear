@@ -29,10 +29,10 @@ function SingleBlog({ blogs, articles, trendArticles }) {
         ))}
         {blogs.length <= 1 && (
           <>
-            <Link href={`/blogs`}>
+            <Link href={`/blogs/news`}>
               <a className="mr-4 font-medium text-gray-600">Category 2</a>
             </Link>
-            <Link href={`/blogs`}>
+            <Link href={`/blogs/news`}>
               <a className="mr-4 font-medium text-gray-600">Category 3</a>
             </Link>
           </>
