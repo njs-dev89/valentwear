@@ -59,7 +59,7 @@ function ContactUs({ about }) {
 
 export default ContactUs;
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
   return {
     props: {
       about: "About",

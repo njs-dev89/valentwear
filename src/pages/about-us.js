@@ -88,7 +88,7 @@ function AboutPage({ about }) {
 
 export default AboutPage;
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
   return {
     props: {
       about: "About",
