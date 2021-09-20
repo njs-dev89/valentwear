@@ -28,6 +28,7 @@ class MyDocument extends Document {
               rel="stylesheet"
             />
           </noscript>
+          <link rel="shortcut icon" href="/valentLogo.png" />
         </Head>
         <body>
           <Main />

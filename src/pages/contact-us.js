@@ -1,5 +1,6 @@
 import SectionHeading from "../components/SectionHeading";
 import { useRouter } from "next/router";
+import Head from "next/head";
 function ContactUs() {
   const router = useRouter();
 
@@ -10,6 +11,13 @@ function ContactUs() {
   }
   return (
     <div>
+      <Head>
+        <title>Contact us</title>
+        <meta
+          name="description"
+          content="Valent was created to serve as a reminder that choice is at the heart of life. We can’t control the circumstances around us, but we can control how we respond in the face of adversity."
+        />
+      </Head>
       <SectionHeading>Contact us</SectionHeading>
       <p className="text-center mx-auto tagline w-3/5 mt-4 md:text-base text-sm">
         Please fill out the form below for general contact inquiries or

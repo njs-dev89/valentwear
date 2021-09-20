@@ -2,10 +2,18 @@ import SectionHeading from "../../components/SectionHeading";
 import Image from "next/image";
 import { getAllCollections } from "../../utils/operations";
 import SingleCollection from "../../components/SingleCollection";
+import Head from "next/head";
 
 function CollectionsPage({ collections }) {
   return (
     <div className="collections relative">
+      <Head>
+        <title>Collections | Valent Wear</title>
+        <meta
+          name="description"
+          content="Valent was created to serve as a reminder that choice is at the heart of life. We can’t control the circumstances around us, but we can control how we respond in the face of adversity."
+        />
+      </Head>
       <div
         className="v-image absolute -top-24"
         style={{ width: "100%", height: "1000px" }}

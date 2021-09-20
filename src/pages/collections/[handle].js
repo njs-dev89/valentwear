@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import Head from "next/head";
 import SingleProductCard from "../../components/SingleProductCard";
 import { getAllProducts, getCollectionByHandle } from "../../utils/operations";
 
-function SingleCollection({ products, query }) {
+function SingleCollection({ products, query, collectionTItle }) {
   const router = useRouter();
   const [category, setCategory] = useState(query.category);
   const [collection, setCollection] = useState(query.handle);
@@ -150,6 +150,13 @@ function SingleCollection({ products, query }) {
 
   return (
     <div className="md:grid md:grid-cols-9 md:gap-4">
+      <Head>
+        <title>{collectionTItle} | Valent Wear</title>
+        <meta
+          name="description"
+          content="Valent was created to serve as a reminder that choice is at the heart of life. We can’t control the circumstances around us, but we can control how we respond in the face of adversity."
+        />
+      </Head>
       <div className="col-span-2">
         <div className="flex gap-4 pb-8">
           <h3 className="font-semibold">
@@ -346,7 +353,7 @@ function SingleCollection({ products, query }) {
 export default SingleCollection;
 
 export const getServerSideProps = async (context) => {
-  let products;
+  let collection, products;
   const category = context.query.category;
   const handle = context.query.handle;
   const color = context.query.color;
@@ -354,11 +361,11 @@ export const getServerSideProps = async (context) => {
   if (handle === "all") {
     products = await getAllProducts();
   } else {
-    const collections = await getCollectionByHandle(handle);
-    if (!collections) {
+    collection = await getCollectionByHandle(handle);
+    if (!collection) {
       products = [];
     } else {
-      products = collections.products;
+      products = collection.products;
     }
   }
   if (category) {
@@ -381,6 +388,7 @@ export const getServerSideProps = async (context) => {
   return {
     props: {
       products,
+      collectionTItle: collection?.title || "Valent Wear",
       query: context.query,
     },
   };

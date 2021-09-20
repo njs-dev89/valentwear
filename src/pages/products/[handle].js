@@ -3,6 +3,7 @@ import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import OptionPicker from "../../components/OptionPicker";
 import { UIContext } from "../../context/uiContext";
 import { useAddItemToCart } from "../../customHooks/cartHooks";
+import Head from "next/head";
 import {
   prepareVariantsImages,
   prepareVariantsWithOptions,
@@ -10,7 +11,7 @@ import {
 import { getProductByHandle } from "../../utils/operations";
 
 function SingleProduct({ product }) {
-  const { openCartDrawer, displayCartDrawer } = useContext(UIContext);
+  const { openCartDrawer } = useContext(UIContext);
   const [loading, setLoading] = useState(false);
   const addItem = useAddItemToCart();
 
@@ -71,6 +72,13 @@ function SingleProduct({ product }) {
 
   return (
     <div className="grid md:grid-cols-3 gap-16">
+      <Head>
+        <title>{product.title} | Valent Wear</title>
+        <meta
+          name="description"
+          content="Valent was created to serve as a reminder that choice is at the heart of life. We can’t control the circumstances around us, but we can control how we respond in the face of adversity."
+        />
+      </Head>
       <div className="md:col-span-2">
         <ImageCarousel
           showZoom

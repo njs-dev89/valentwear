@@ -73,7 +73,7 @@ function LinkDrawerLinks({ closeLinkDrawer }) {
       </ul>
       <ul className="mx-8 mt-8">
         <li className="mb-3">
-          <Link href="/">
+          <Link href="/contact-us">
             <a
               className="capitalize text-sm text-gray-300"
               onClick={closeLinkDrawer}

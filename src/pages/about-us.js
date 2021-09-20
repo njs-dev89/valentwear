@@ -1,6 +1,7 @@
 import SectionHeading from "../components/SectionHeading";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function AboutPage() {
   const router = useRouter();
@@ -12,6 +13,13 @@ function AboutPage() {
   }
   return (
     <div>
+      <Head>
+        <title>Contact us</title>
+        <meta
+          name="description"
+          content="Valent was created to serve as a reminder that choice is at the heart of life. We can’t control the circumstances around us, but we can control how we respond in the face of adversity."
+        />
+      </Head>
       <div className="">
         <SectionHeading hashTag="#ChooseGreatness">
           Victors <del className="mx-2 hidden lg:inline">Victoms</del> of

@@ -6,10 +6,22 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { FiSearch } from "react-icons/fi";
+import { useRouter } from "next/router";
+import Head from "next/head";
 function SingleArticle({ blogs, article, trendArticles }) {
+  const router = useRouter();
   const date = new Date(article.publishedAt);
   return (
     <div>
+      <Head>
+        <title>
+          {article.title} | {router.query.category}
+        </title>
+        <meta
+          name="description"
+          content="Valent was created to serve as a reminder that choice is at the heart of life. We can’t control the circumstances around us, but we can control how we respond in the face of adversity."
+        />
+      </Head>
       <div className="flex justify-center pb-8 border-b-2 mb-16">
         {blogs.map((blog) => (
           <Link key={blog.id} href={`/blogs/${blog.handle}`}>

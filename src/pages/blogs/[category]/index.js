@@ -7,12 +7,20 @@ import Link from "next/link";
 import SingleCollection from "../../../components/SingleCollection";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 
 function SingleBlog({ blogs, articles, trendArticles }) {
   const router = useRouter();
   console.log({ blogs, articles, router, trendArticles });
   return (
     <div>
+      <Head>
+        <title>{router.query.category}</title>
+        <meta
+          name="description"
+          content="Valent was created to serve as a reminder that choice is at the heart of life. We can’t control the circumstances around us, but we can control how we respond in the face of adversity."
+        />
+      </Head>
       <div className="flex justify-center pb-8 border-b-2 mb-16">
         {blogs.map((blog) => (
           <Link key={blog.id} href={`/blogs/${blog.handle}`}>
