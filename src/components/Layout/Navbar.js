@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FiMenu, FiSearch, FiShoppingCart } from "react-icons/fi";
+import CategoryDropdown from "./CategoryDropdown";
 
 function Navbar({ setCartOpen, setLinkDrawerOpen, setSearchOpen }) {
   const router = useRouter();
@@ -23,7 +24,7 @@ function Navbar({ setCartOpen, setLinkDrawerOpen, setSearchOpen }) {
               className="sm:mr-6 mr-2 sm:text-xl text-base cursor-pointer"
               onClick={() => setLinkDrawerOpen(true)}
             />
-            <span className="sm:text-base text-sm">Categories</span>
+            <CategoryDropdown />
             <Link href="/collections">
               <a className="ml-2 sm:text-base text-sm">Collections</a>
             </Link>

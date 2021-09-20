@@ -3,13 +3,8 @@ import HomeBanner from "../components/HomeBanner";
 import SectionHeading from "../components/SectionHeading";
 import SingleProductCard from "../components/SingleProductCard";
 import SingleCollection from "../components/SingleCollection";
-import {
-  customQuery,
-  fetchMethod,
-  fetchQuery,
-  getAllCollections,
-  getCollectionByHandle,
-} from "../utils/operations";
+import { getAllCollections, getCollectionByHandle } from "../utils/operations";
+import Link from "next/link";
 
 export default function Home({ bestSeller, featureCollections }) {
   return (
@@ -45,6 +40,11 @@ export default function Home({ bestSeller, featureCollections }) {
               handle={bestSeller.products[2].handle}
             />
           </div>
+          <p className="text-center text-gold mt-16 font-semibold">
+            <Link href={`/collections/${bestSeller.handle}`}>
+              <a className="underline">View all</a>
+            </Link>
+          </p>
         </div>
       ) : (
         ""

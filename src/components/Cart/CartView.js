@@ -12,7 +12,7 @@ const CartView = () => {
   const isEmpty = items.length === 0;
 
   return (
-    <div className="">
+    <div className="mb-48">
       {isEmpty ? (
         <>Your cart is empty</>
       ) : (
