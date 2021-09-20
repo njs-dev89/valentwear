@@ -1,6 +1,13 @@
 import SectionHeading from "../components/SectionHeading";
+import { useRouter } from "next/router";
+function ContactUs() {
+  const router = useRouter();
 
-function ContactUs({ about }) {
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       <SectionHeading>Contact us</SectionHeading>

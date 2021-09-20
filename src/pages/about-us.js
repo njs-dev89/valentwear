@@ -1,7 +1,15 @@
 import SectionHeading from "../components/SectionHeading";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-function AboutPage({ about }) {
+function AboutPage() {
+  const router = useRouter();
+
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       <div className="">
