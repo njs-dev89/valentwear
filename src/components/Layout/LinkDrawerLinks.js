@@ -64,7 +64,7 @@ function LinkDrawerLinks({ closeLinkDrawer }) {
           </Link>
         </li>
         <li className="mb-3">
-          <Link href="/blogs">
+          <Link href="/blogs/news">
             <a className="uppercase" onClick={closeLinkDrawer}>
               Stories of greatness
             </a>

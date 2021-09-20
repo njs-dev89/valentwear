@@ -56,7 +56,7 @@ function Footer() {
                 title="Community"
                 links={[
                   { text: "Brand", link: "/anout-us" },
-                  { text: "Stories of Greatness", link: "/blogs" },
+                  { text: "Stories of Greatness", link: "/blogs/news" },
                   { text: "Contact us", link: "/contact-us" },
                 ]}
               />
