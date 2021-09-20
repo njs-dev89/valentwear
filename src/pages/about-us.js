@@ -92,3 +92,9 @@ function AboutPage() {
 }
 
 export default AboutPage;
+
+export const getStaticProps = () => {
+  return {
+    props: {},
+  };
+};

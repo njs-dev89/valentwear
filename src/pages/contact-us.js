@@ -63,3 +63,9 @@ function ContactUs() {
 }
 
 export default ContactUs;
+
+export const getStaticProps = () => {
+  return {
+    props: {},
+  };
+};
