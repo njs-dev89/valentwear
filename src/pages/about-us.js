@@ -96,7 +96,7 @@ function AboutPage() {
 
 export default AboutPage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   console.log("about page");
   return {
     props: {

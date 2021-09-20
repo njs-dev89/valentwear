@@ -66,7 +66,7 @@ function ContactUs() {
 
 export default ContactUs;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   console.log("contact page");
   return {
     props: {
