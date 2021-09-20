@@ -8,7 +8,6 @@ function CategoryDropdown() {
       <button
         className="sm:text-base text-sm"
         onClick={() => setDropOpen(!dropOpen)}
-        onBlur={() => setDropOpen(false)}
       >
         Categories
       </button>
@@ -18,19 +17,29 @@ function CategoryDropdown() {
         }`}
       >
         <Link href="/collections/all?category=neckwear">
-          <a className="py-1">Neckwear</a>
+          <a className="py-1" onClick={() => setDropOpen(false)}>
+            Neckwear
+          </a>
         </Link>
         <Link href="/collections/all?category=wristwear">
-          <a className="py-1">Wristwear</a>
+          <a className="py-1" onClick={() => setDropOpen(false)}>
+            Wristwear
+          </a>
         </Link>
         <Link href="/collections/all?category=ringwear">
-          <a className="py-1">Ringwear</a>
+          <a className="py-1" onClick={() => setDropOpen(false)}>
+            Ringwear
+          </a>
         </Link>
         <Link href="/collections/all?category=men">
-          <a className="py-1">Men</a>
+          <a className="py-1" onClick={() => setDropOpen(false)}>
+            Men
+          </a>
         </Link>
         <Link href="/collections/all?category=women">
-          <a className="py-1">Women</a>
+          <a className="py-1" onClick={() => setDropOpen(false)}>
+            Women
+          </a>
         </Link>
       </div>
     </div>
