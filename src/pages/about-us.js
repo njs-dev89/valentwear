@@ -1,7 +1,12 @@
 import SectionHeading from "../components/SectionHeading";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 function AboutPage() {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       <div className="">
