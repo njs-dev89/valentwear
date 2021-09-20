@@ -1,12 +1,7 @@
 import SectionHeading from "../components/SectionHeading";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
-function AboutPage() {
-  const router = useRouter();
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
+function AboutPage({ about }) {
   return (
     <div>
       <div className="">
@@ -95,6 +90,8 @@ export default AboutPage;
 
 export const getStaticProps = () => {
   return {
-    props: {},
+    props: {
+      about: "About",
+    },
   };
 };

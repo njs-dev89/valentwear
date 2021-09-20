@@ -1,11 +1,6 @@
 import SectionHeading from "../components/SectionHeading";
-import { useRouter } from "next/router";
 
-function ContactUs() {
-  const router = useRouter();
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
+function ContactUs({ about }) {
   return (
     <div>
       <SectionHeading>Contact us</SectionHeading>
@@ -66,6 +61,8 @@ export default ContactUs;
 
 export const getStaticProps = () => {
   return {
-    props: {},
+    props: {
+      about: "About",
+    },
   };
 };
