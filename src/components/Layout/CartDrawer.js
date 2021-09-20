@@ -24,7 +24,7 @@ const CartDrawer = ({ children, open = false, onClose }) => {
         leave: { transform: "translateX(100%)" },
       }}
     >
-      <div className="relative h-screen">
+      <div className="relative h-screen overflow-auto">
         <ModalTitle className="text-center relative px-4 py-6 bg-gray-100">
           <span className="text-2xl">Shopping cart</span>
           <ModalCloseTarget>

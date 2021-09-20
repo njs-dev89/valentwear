@@ -4,7 +4,6 @@ import { getAllCollections } from "../../utils/operations";
 import SingleCollection from "../../components/SingleCollection";
 
 function CollectionsPage({ collections }) {
-  console.log(collections);
   return (
     <div className="collections relative">
       <div
@@ -41,6 +40,7 @@ function CollectionsPage({ collections }) {
               }
               link={`/collections/${collection.handle}`}
               imgSrc={collection.image?.src || "/default2.jpg"}
+              btnText="View Collection"
             />
           );
         })}

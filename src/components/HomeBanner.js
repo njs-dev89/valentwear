@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 function HomeBanner() {
   return (
@@ -10,9 +10,9 @@ function HomeBanner() {
       <h1 className="text-center md:text-6xl sm:text-4xl text-3xl font-semibold mb-8 mt-2 uppercase">
         Choose Greatness
       </h1>
-      <button className="px-12 py-3 bg-gold font-medium text-black">
-        Shop Now
-      </button>
+      <Link href="/collections/all">
+        <a className="px-12 py-3 bg-gold font-medium text-black">Shop Now</a>
+      </Link>
     </div>
   );
 }

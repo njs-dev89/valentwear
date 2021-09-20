@@ -7,7 +7,7 @@ function SectionHeading({ hashTag, children }) {
         <span className="text-base font-normal tracking-wider mb-2">
           {hashTag}
         </span>
-        <h1 className="headline text-center w-full flex items-center justify-center">
+        <h1 className="headline text-center w-full flex items-center justify-center uppercase">
           {children}
         </h1>
       </div>

@@ -8,8 +8,11 @@ import Navbar from "./Navbar";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import LinkDrawerLinks from "./LinkDrawerLinks";
+import SearchModal from "./SearchModal";
+import { useState } from "react/cjs/react.development";
 
 function Layout({ children }) {
+  const [searchOpen, setSearchOpen] = useState(false);
   const {
     displayLinkDrawer,
     closeLinkDrawer,
@@ -25,7 +28,9 @@ function Layout({ children }) {
         <Navbar
           setCartOpen={openCartDrawer}
           setLinkDrawerOpen={openLinkDrawer}
+          setSearchOpen={setSearchOpen}
         />
+        <SearchModal isOpen={searchOpen} setSearchOpen={setSearchOpen} />
         <CartDrawer open={displayCartDrawer} onClose={closeCartDrawer}>
           <CartView />
         </CartDrawer>

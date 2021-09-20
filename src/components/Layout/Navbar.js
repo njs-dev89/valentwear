@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FiMenu, FiSearch, FiShoppingCart } from "react-icons/fi";
 
-function Navbar({ setCartOpen, setLinkDrawerOpen }) {
+function Navbar({ setCartOpen, setLinkDrawerOpen, setSearchOpen }) {
   const router = useRouter();
   return (
     <nav
@@ -29,12 +29,15 @@ function Navbar({ setCartOpen, setLinkDrawerOpen }) {
             </Link>
           </div>
           <div className="flex items-center">
-            <span className="flex items-center sm:mr-6 mr-2">
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="flex items-center sm:mr-6 mr-2"
+            >
               <FiSearch className="mr-1 sm:text-xl text-base" />
               <span className="sm:text-xl text-sm sm:inline hidden">
                 Search
               </span>
-            </span>
+            </button>
             <FiShoppingCart
               className="sm:text-xl text-base cursor-pointer"
               onClick={() => setCartOpen(true)}

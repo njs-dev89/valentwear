@@ -34,3 +34,11 @@
 .option-picker {
   border-color: black !important;
 }
+
+.filter-checkbox {
+  border-color: black !important;
+}
+
+.filter-checkbox:checked {
+  border-color: transparent !important;
+}
