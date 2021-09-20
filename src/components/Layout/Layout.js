@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UIContext } from "../../context/uiContext";
 import CartView from "../Cart/CartView";
 import CartDrawer from "./CartDrawer";
@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import LinkDrawerLinks from "./LinkDrawerLinks";
 import SearchModal from "./SearchModal";
-import { useState } from "react/cjs/react.development";
 
 function Layout({ children }) {
   const [searchOpen, setSearchOpen] = useState(false);
